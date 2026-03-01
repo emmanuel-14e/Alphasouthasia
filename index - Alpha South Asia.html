@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alpha Region - Full Info Pack</title>
+
+<style>
+:root {
+    --alpha-red: #c8102e;
+    --text-gray: #1a1a1a;
+    --soft-pink: #fdf2f2;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #e0e0e0;
+    color: var(--text-gray);
+}
+
+/* Input Panel */
+.controls {
+    background: white;
+    padding: 20px;
+    border-bottom: 3px solid var(--alpha-red);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.field-group { display: flex; flex-direction: column; gap: 4px; }
+.field-group label {
+    font-size: 10px;
+    font-weight: bold;
+    color: #666;
+    text-transform: uppercase;
+}
+.field-group input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 13px;
+    width: 160px;
+}
+
+.btn-print {
+    margin-left: auto;
+    background: var(--alpha-red);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+/* Page Layout */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.a4-page {
+    width: 210mm;
+    height: 297mm;
+    background-color: white;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    overflow: hidden;
+    page-break-after: always;
+}
+
+.background-layer {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1;
+}
+.background-layer img { width: 100%; height: 100%; object-fit: fill; }
+
+.content-layer {
+    position: relative;
+    z-index: 2;
+    padding: 35mm 25mm 20mm 25mm;
+}
+
+/* Text Styles */
+.edit-highlight { color: var(--alpha-red); font-weight: bold; }
+
+@media print {
+    @page { margin: 0; size: A4; }
+    body { background: none; }
+    .controls { display: none; }
+    .page-container { padding: 0; gap: 0; }
+    .a4-page { box-shadow: none; margin: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- INPUT CONTROLS -->
+<div class="controls">
+    <div class="field-group">
+        <label>Letter Date</label>
+        <input type="text" id="in-date" value="March 1, 2026" oninput="sync()">
+    </div>
+
+    <div class="field-group">
+        <label>Title</label>
+        <input type="text" id="in-title" placeholder="Pastor" oninput="sync()">
+    </div>
+
+    <div class="field-group">
+        <label>Full Name</label>
+        <input type="text" id="in-name" placeholder="Name" oninput="sync()">
+    </div>
+
+    <div class="field-group">
+        <label>Church / Org</label>
+        <input type="text" id="in-church" placeholder="Church Name" oninput="sync()">
+    </div>
+
+    <div class="field-group">
+        <label>Region Name</label>
+        <input type="text" id="in-region" value="India" oninput="sync()">
+    </div>
+
+    <button class="btn-print" onclick="window.print()">🖨️ Print Full 5-Page PDF</button>
+</div>
+
+<div class="page-container">
+
+<!-- PAGE 1 LETTER -->
+<div class="a4-page">
+<div class="background-layer">
+<img src="https://res.cloudinary.com/dz2stle0m/image/upload/v1772169102/DOCUMENT_AAC_2026-08_ub2nh8.jpg">
+</div>
+
+<div class="content-layer" style="padding-top:40mm; font-size:10pt; line-height:1.55;">
+
+<p style="margin-bottom:13px">
+Date: <span id="out-date" class="edit-highlight">March 1, 2026</span> [cite: 7]
+</p>
+
+<div style="margin-bottom:16px; font-weight:bold;">
+<span id="out-name" class="edit-highlight">[Name of Invitee]</span><br>
+<span id="out-church" class="edit-highlight">[Name of Church/Organisation]</span>
+</div>
+
+<p style="margin-bottom:10px">
+Dear <span id="out-salutation" class="edit-highlight">[Title] [Name]</span>,
+</p>
+
+<p style="margin-bottom:9px">
+<i>Greetings from Alpha <span id="out-region1">India</span>!</i>
+</p>
+
+<p style="font-weight:bold; text-decoration:underline; margin-bottom:10px;">
+SUB: Alpha Conferences from June 29 – July 3, 2026 in Kuala Lumpur, Malaysia [cite: 7, 12]
+</p>
+
+<p style="margin-bottom:9px; text-align:justify;">
+We are delighted to announce Alpha Asia Pacific’s milestone events happening in 2026! 
+Alpha Converge, Alpha APAC Conference (AAC) and Alpha Workplace Summit 2026 
+is happening in Kuala Lumpur from 29 June - 3 July 2026 [cite: 11, 12].
+</p>
+
+<p style="margin-bottom:9px; text-align:justify;">
+We are honoured to invite you to be part of the delegation from <span id="out-region2">India</span> 
+for Converge which is an exclusive event for key pastors and influential leaders 
+from <span id="out-region3">India</span> on June 29 & 30, 2026 and thereafter join the main 
+Alpha Asia-Pacific Conference (AAC) on July 1 & 2.
+</p>
+
+<p style="margin-bottom:9px; text-align:justify;">
+Alpha <span id="out-region4">India</span> will cover costs for your registration fees 
+and accommodation (twin-sharing basis) from June 29 – July 3, 2026. 
+Participants are requested to cover flights, local conveyance, and food personally.
+</p>
+
+<p style="margin-bottom:9px; text-align:justify;">
+Please confirm your participation by <strong>March 15, 2026</strong>.
+</p>
+
+<div style="margin-top:16px;">
+<img src="https://res.cloudinary.com/dz2stle0m/image/upload/v1772169154/Thomas_fymgnt.png"
+style="max-width:160px; display:block; margin-left:-10px; margin-bottom:-13px;">
+
+<p>
+<strong>Thomas Ernest,</strong><br>
+Regional Development Director<br>
+Alpha South Asia
+</p>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<script>
+function sync() {
+
+const dateVal = document.getElementById('in-date').value || 'March 1, 2026';
+const title = document.getElementById('in-title').value || '';
+const name = document.getElementById('in-name').value || '[Name of Invitee]';
+const church = document.getElementById('in-church').value || '[Name of Church/Organisation]';
+const region = document.getElementById('in-region').value || 'India';
+
+document.getElementById('out-date').innerText = dateVal;
+document.getElementById('out-name').innerText = name;
+document.getElementById('out-church').innerText = church;
+document.getElementById('out-salutation').innerText = (title + " " + name).trim();
+
+document.getElementById('out-region1').innerText = region;
+document.getElementById('out-region2').innerText = region;
+document.getElementById('out-region3').innerText = region;
+document.getElementById('out-region4').innerText = region;
+
+}
+</script>
+
+</body>
+</html>
