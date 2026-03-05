@@ -225,7 +225,7 @@ const title = document.getElementById('in-title').value || '';
 const name = document.getElementById('in-name').value || '[Name of Invitee]';
 const church = document.getElementById('in-church').value || '[Name of Church/Organisation]';
 const region = document.getElementById('in-region').value || 'India';
-const deadlineVal = document.getElementById('in-deadline').value || 'March 15, 2026';
+const deadline = document.getElementById('in-deadline').value || 'March 15, 2026';
 
 document.getElementById('out-date').innerText = dateVal;
 document.getElementById('out-name').innerText = name;
@@ -237,8 +237,8 @@ document.getElementById('out-region2').innerText = region;
 document.getElementById('out-region3').innerText = region;
 document.getElementById('out-region4').innerText = region;
 
-// Update the deadline in the letter
-document.getElementById('out-deadline').innerText = deadlineVal;
+// Update the last sentence date
+document.getElementById('out-deadline').innerText = deadline;
 
 }
 </script>
