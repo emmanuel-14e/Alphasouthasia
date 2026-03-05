@@ -109,7 +109,6 @@ body {
 
 <body>
 
-<!-- INPUT CONTROLS -->
 <div class="controls">
     <div class="field-group">
         <label>Letter Date</label>
@@ -136,12 +135,16 @@ body {
         <input type="text" id="in-region" value="India" oninput="sync()">
     </div>
 
+    <div class="field-group">
+        <label>Deadline Date</label>
+        <input type="text" id="in-deadline" value="March 15, 2026" oninput="sync()">
+    </div>
+
     <button class="btn-print" onclick="window.print()">🖨️ Print Full 5-Page PDF</button>
 </div>
 
 <div class="page-container">
 
-<!-- PAGE 1 LETTER -->
 <div class="a4-page">
 <div class="background-layer">
 <img src="https://res.cloudinary.com/dz2stle0m/image/upload/v1772169102/DOCUMENT_AAC_2026-08_ub2nh8.jpg">
@@ -194,7 +197,7 @@ If you are available to participate in the events could you please confirm by su
 </p>
     <br>
 <p style="margin-bottom:9px; text-align:justify;">
-Please confirm your participation by <strong>March 15, 2026</strong>.
+Please confirm your participation by <strong id="out-deadline" class="edit-highlight">March 15, 2026</strong>.
 </p>
 </br>
 
@@ -222,6 +225,7 @@ const title = document.getElementById('in-title').value || '';
 const name = document.getElementById('in-name').value || '[Name of Invitee]';
 const church = document.getElementById('in-church').value || '[Name of Church/Organisation]';
 const region = document.getElementById('in-region').value || 'India';
+const deadlineVal = document.getElementById('in-deadline').value || 'March 15, 2026';
 
 document.getElementById('out-date').innerText = dateVal;
 document.getElementById('out-name').innerText = name;
@@ -232,6 +236,9 @@ document.getElementById('out-region1').innerText = region;
 document.getElementById('out-region2').innerText = region;
 document.getElementById('out-region3').innerText = region;
 document.getElementById('out-region4').innerText = region;
+
+// Update the deadline in the letter
+document.getElementById('out-deadline').innerText = deadlineVal;
 
 }
 </script>
