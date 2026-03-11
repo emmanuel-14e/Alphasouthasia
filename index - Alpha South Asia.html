@@ -7,13 +7,13 @@
     <style>
         :root {
             --alpha-red: #c8102e;
-            --text-gray: #1a1a1a;
+            --text-gray: #333333;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body { 
-            font-family: 'Segoe UI', Arial, sans-serif; 
+            font-family: 'Segoe UI', Candara, 'Bitstream Vera Sans', 'DejaVu Sans', 'Bitstream Vera Sans', 'Trebuchet MS', Verdana, 'Verdana Ref', sans-serif; 
             background: #e0e0e0; 
             color: var(--text-gray);
         }
@@ -21,7 +21,7 @@
         /* Input Panel */
         .controls {
             background: white;
-            padding: 20px;
+            padding: 15px 20px;
             border-bottom: 3px solid var(--alpha-red);
             display: flex;
             justify-content: space-between;
@@ -41,10 +41,7 @@
             cursor: pointer;
             font-weight: bold;
             font-size: 14px;
-            transition: opacity 0.2s;
         }
-
-        .btn-print:hover { opacity: 0.9; }
 
         /* Page Layout */
         .page-container {
@@ -82,7 +79,8 @@
         .content-layer {
             position: relative;
             z-index: 2;
-            padding: 35mm 25mm 20mm 25mm; 
+            /* Adjusted padding to push content further down */
+            padding: 65mm 30mm 25mm 30mm; 
         }
 
         .website-link {
@@ -115,32 +113,49 @@
     </div>
 
     <div class="a4-page">
-        <div class="background-layer"><img src="https://res.cloudinary.com/dz2stle0m/image/upload/v1772169102/DOCUMENT_AAC_2026-08_ub2nh8.jpg"></div>
-        <div class="content-layer" style="padding-top: 40mm; font-size: 11.5pt; line-height: 1.6;">
-            <p style="margin-bottom:12px">Date: 12th March 2026</p>
+        <div class="background-layer">
+            <img src="https://res.cloudinary.com/dz2stle0m/image/upload/v1772169102/DOCUMENT_AAC_2026-08_ub2nh8.jpg" alt="Letterhead Background">
+        </div>
+        
+        <div class="content-layer">
+            <p style="margin-bottom: 25px; font-size: 11pt;">Date: 12th March 2026</p>
             
-            <p style="margin-bottom:15px; font-weight: bold; color: var(--alpha-red); font-size: 10.5pt; white-space: nowrap;">Subject: Invitation to Alpha Asia Pacific Conference (AAC) 2026 – Kuala Lumpur</p>
+            <p style="margin-bottom: 25px; font-weight: bold; color: var(--alpha-red); font-size: 10.5pt; text-transform: uppercase; letter-spacing: 0.5px;">
+                Subject: Invitation to Alpha Asia Pacific Conference (AAC) 2026 – Kuala Lumpur
+            </p>
 
-            <p style="margin-bottom:12px">Dear Church Leaders and Partners,</p>
+            <p style="margin-bottom: 18px; font-weight: bold;">Dear Church Leaders and Partners,</p>
             
-            <p style="margin-bottom:12px">Greetings from Alpha India!</p>
+            <p style="margin-bottom: 18px;">Greetings from Alpha India!</p>
             
-            <p style="margin-bottom:12px; text-align:justify;">We are delighted to announce a landmark event for the coming year: the <strong>Alpha Asia Pacific Conference (AAC) 2026</strong>, held in Kuala Lumpur, Malaysia, on <strong>July 1 and 2, 2026</strong>.</p>
+            <p style="margin-bottom: 18px; text-align: justify; line-height: 1.7; font-size: 11pt;">
+                We are delighted to announce a landmark event for the coming year: the <strong>Alpha Asia Pacific Conference (AAC) 2026</strong>, held in Kuala Lumpur, Malaysia, on <strong>July 1 and 2, 2026</strong>.
+            </p>
             
-            <p style="margin-bottom:12px; text-align:justify;">This is a special milestone gathering where we expect to bring together over 3,000 delegates from across the Asia Pacific region. As we step into a new season, we believe God is unveiling a fresh vision for His Church, for this generation, and for the nations. Our prayer is that this will be a moment of awakening, a time to hear His call afresh and lift our eyes to see what no eye has seen.</p>
+            <p style="margin-bottom: 18px; text-align: justify; line-height: 1.7; font-size: 11pt;">
+                This is a special milestone gathering where we expect to bring together over 3,000 delegates from across the Asia Pacific region. As we step into a new season, we believe God is unveiling a fresh vision for His Church, for this generation, and for the nations. Our prayer is that this will be a moment of awakening, a time to hear His call afresh and lift our eyes to see what no eye has seen.
+            </p>
             
-            <p style="margin-bottom:12px; text-align:justify;">We are honored to invite you to be part of the delegation from India for this unity gathering of leaders, pioneers, and dreamers. You are also welcome to bring a team from your church to share in this experience.</p>
+            <p style="margin-bottom: 18px; text-align: justify; line-height: 1.7; font-size: 11pt;">
+                We are honored to invite you to be part of the delegation from India for this unity gathering of leaders, pioneers, and dreamers. You are also welcome to bring a team from your church to share in this experience.
+            </p>
             
-            <p style="margin-bottom:12px; text-align:justify;">Specific details regarding the conference schedule and venue can be found in the attached document. For additional information and registration, please visit <a href="https://www.alphaapacconf.com/" class="website-link">www.alphaapacconf.com</a>.</p>
+            <p style="margin-bottom: 18px; text-align: justify; line-height: 1.7; font-size: 11pt;">
+                Specific details regarding the conference schedule and venue can be found in the attached document. For additional information and registration, please visit <a href="https://www.alphaapacconf.com/" class="website-link">www.alphaapacconf.com</a>.
+            </p>
             
-            <p style="margin-bottom:12px; text-align:justify;">Please note that participants are expected to cover all personal costs, including registration fees, flights, accommodation, food, and local conveyance.</p>
+            <p style="margin-bottom: 18px; text-align: justify; line-height: 1.7; font-size: 11pt;">
+                Please note that participants are expected to cover all personal costs, including registration fees, flights, accommodation, food, and local conveyance.
+            </p>
             
-            <p style="margin-bottom:15px;">We would appreciate it if you could confirm your participation by <strong>March 30th, 2026</strong>. Thank you for your continued partnership and support as we serve the mission together.</p>
+            <p style="margin-bottom: 30px; line-height: 1.7; font-size: 11pt;">
+                We would appreciate it if you could confirm your participation by <strong>March 30th, 2026</strong>. Thank you for your continued partnership and support as we serve the mission together.
+            </p>
 
-            <div style="margin-top:15px;">
-                <p>In His Service,</p>
-                <img src="https://res.cloudinary.com/dz2stle0m/image/upload/v1772169154/Thomas_fymgnt.png" style="max-width:150px; display:block; margin-left:-10px; margin-top: 5px;">
-                <p><strong>The Alpha India Team</strong></p>
+            <div style="margin-top: 20px;">
+                <p style="margin-bottom: 5px;">In His Service,</p>
+                <img src="https://res.cloudinary.com/dz2stle0m/image/upload/v1772169154/Thomas_fymgnt.png" style="max-width: 140px; display: block; margin-left: -10px;">
+                <p style="margin-top: 5px; font-weight: bold; font-size: 11pt;">The Alpha India Team</p>
             </div>
         </div>
     </div>
