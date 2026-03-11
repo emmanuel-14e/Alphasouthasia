@@ -7,18 +7,17 @@
     <style>
         :root {
             --alpha-red: #c8102e;
-            --text-gray: #333333;
+            --text-gray: #222222;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body { 
-            font-family: 'Segoe UI', Candara, 'Bitstream Vera Sans', 'DejaVu Sans', 'Bitstream Vera Sans', 'Trebuchet MS', Verdana, 'Verdana Ref', sans-serif; 
+            font-family: 'Segoe UI', Arial, sans-serif; 
             background: #e0e0e0; 
             color: var(--text-gray);
         }
 
-        /* Input Panel */
         .controls {
             background: white;
             padding: 15px 20px;
@@ -40,10 +39,8 @@
             border-radius: 4px;
             cursor: pointer;
             font-weight: bold;
-            font-size: 14px;
         }
 
-        /* Page Layout */
         .page-container {
             display: flex;
             flex-direction: column;
@@ -79,8 +76,8 @@
         .content-layer {
             position: relative;
             z-index: 2;
-            /* Adjusted padding to push content further down */
-            padding: 65mm 30mm 25mm 30mm; 
+            /* Balanced padding to keep signature on page */
+            padding: 55mm 28mm 20mm 28mm; 
         }
 
         .website-link {
@@ -95,67 +92,66 @@
             .controls { display: none; }
             .page-container { padding: 0; gap: 0; }
             .a4-page { box-shadow: none; margin: 0; }
-            .website-link { text-decoration: underline; }
         }
     </style>
 </head>
 <body>
 
 <div class="controls">
-    <div style="font-weight: bold; color: var(--alpha-red);">Alpha India Letter Generator</div>
+    <div style="font-weight: bold; color: var(--alpha-red);">Alpha India Letterhead</div>
     <button class="btn-print" onclick="window.print()">🖨️ Print 2-Page PDF</button>
 </div>
 
 <div class="page-container">
     
     <div class="a4-page">
-        <img src="https://res.cloudinary.com/dz2stle0m/image/upload/v1773200773/04_neqk1c.jpg" class="full-page-img" alt="Alpha AAC 2026 Cover">
+        <img src="https://res.cloudinary.com/dz2stle0m/image/upload/v1773200773/04_neqk1c.jpg" class="full-page-img">
     </div>
 
     <div class="a4-page">
         <div class="background-layer">
-            <img src="https://res.cloudinary.com/dz2stle0m/image/upload/v1772169102/DOCUMENT_AAC_2026-08_ub2nh8.jpg" alt="Letterhead Background">
+            <img src="https://res.cloudinary.com/dz2stle0m/image/upload/v1772169102/DOCUMENT_AAC_2026-08_ub2nh8.jpg">
         </div>
         
         <div class="content-layer">
-            <p style="margin-bottom: 25px; font-size: 11pt;">Date: 12th March 2026</p>
+            <p style="margin-bottom: 15px; font-size: 10.5pt;">Date: 12th March 2026</p>
             
-            <p style="margin-bottom: 25px; font-weight: bold; color: var(--alpha-red); font-size: 10.5pt; text-transform: uppercase; letter-spacing: 0.5px;">
+            <p style="margin-bottom: 15px; font-weight: bold; color: var(--alpha-red); font-size: 10pt; text-transform: uppercase;">
                 Subject: Invitation to Alpha Asia Pacific Conference (AAC) 2026 – Kuala Lumpur
             </p>
 
-            <p style="margin-bottom: 18px; font-weight: bold;">Dear Church Leaders and Partners,</p>
+            <p style="margin-bottom: 12px; font-weight: bold; font-size: 10.5pt;">Dear Church Leaders and Partners,</p>
             
-            <p style="margin-bottom: 18px;">Greetings from Alpha India!</p>
+            <p style="margin-bottom: 12px; font-size: 10.5pt;">Greetings from Alpha India!</p>
             
-            <p style="margin-bottom: 18px; text-align: justify; line-height: 1.7; font-size: 11pt;">
+            <p style="margin-bottom: 10px; text-align: justify; line-height: 1.5; font-size: 10.5pt;">
                 We are delighted to announce a landmark event for the coming year: the <strong>Alpha Asia Pacific Conference (AAC) 2026</strong>, held in Kuala Lumpur, Malaysia, on <strong>July 1 and 2, 2026</strong>.
             </p>
             
-            <p style="margin-bottom: 18px; text-align: justify; line-height: 1.7; font-size: 11pt;">
+            <p style="margin-bottom: 10px; text-align: justify; line-height: 1.5; font-size: 10.5pt;">
                 This is a special milestone gathering where we expect to bring together over 3,000 delegates from across the Asia Pacific region. As we step into a new season, we believe God is unveiling a fresh vision for His Church, for this generation, and for the nations. Our prayer is that this will be a moment of awakening, a time to hear His call afresh and lift our eyes to see what no eye has seen.
             </p>
             
-            <p style="margin-bottom: 18px; text-align: justify; line-height: 1.7; font-size: 11pt;">
+            <p style="margin-bottom: 10px; text-align: justify; line-height: 1.5; font-size: 10.5pt;">
                 We are honored to invite you to be part of the delegation from India for this unity gathering of leaders, pioneers, and dreamers. You are also welcome to bring a team from your church to share in this experience.
             </p>
             
-            <p style="margin-bottom: 18px; text-align: justify; line-height: 1.7; font-size: 11pt;">
+            <p style="margin-bottom: 10px; text-align: justify; line-height: 1.5; font-size: 10.5pt;">
                 Specific details regarding the conference schedule and venue can be found in the attached document. For additional information and registration, please visit <a href="https://www.alphaapacconf.com/" class="website-link">www.alphaapacconf.com</a>.
             </p>
             
-            <p style="margin-bottom: 18px; text-align: justify; line-height: 1.7; font-size: 11pt;">
+            <p style="margin-bottom: 10px; text-align: justify; line-height: 1.5; font-size: 10.5pt;">
                 Please note that participants are expected to cover all personal costs, including registration fees, flights, accommodation, food, and local conveyance.
             </p>
             
-            <p style="margin-bottom: 30px; line-height: 1.7; font-size: 11pt;">
+            <p style="margin-bottom: 20px; line-height: 1.5; font-size: 10.5pt;">
                 We would appreciate it if you could confirm your participation by <strong>March 30th, 2026</strong>. Thank you for your continued partnership and support as we serve the mission together.
             </p>
 
-            <div style="margin-top: 20px;">
-                <p style="margin-bottom: 5px;">In His Service,</p>
-                <img src="https://res.cloudinary.com/dz2stle0m/image/upload/v1772169154/Thomas_fymgnt.png" style="max-width: 140px; display: block; margin-left: -10px;">
-                <p style="margin-top: 5px; font-weight: bold; font-size: 11pt;">The Alpha India Team</p>
+            <div style="margin-top: 10px;">
+                <p style="margin-bottom: 0px; font-size: 10.5pt;">In His Service,</p>
+                <img src="https://res.cloudinary.com/dz2stle0m/image/upload/v1772169154/Thomas_fymgnt.png" style="max-width: 130px; display: block; margin-left: -10px;">
+                <p style="margin-top: 0px; font-weight: bold; font-size: 10.5pt;">The Alpha India Team</p>
             </div>
         </div>
     </div>
